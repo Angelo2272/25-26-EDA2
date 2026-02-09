@@ -27,7 +27,6 @@ Repo de materiales y proyectos de la asignatura **EDA2** del [Grado de Ingenier�
 
 NOTA: *Algunos enlaces podrían requerir **credenciales de acceso al campus** o a otros espacios colaborativos.*
 
-- Hoja de asistencia et-al
-- Libro de la asignatura
+- [Hoja de asistencia et-al](https://docs.google.com/spreadsheets/d/1DPUHUosxabHopvmW5gQE7KgwDrSQOG0sibqFspoVDHk/edit?usp=sharing)
 - [Repo de la asignatura](https://github.com/mmasias/EDA2)
 - Este repo, versión de ediciones pasadas: [24-25](https://github.com/mmasias/24-25-EDA2)
