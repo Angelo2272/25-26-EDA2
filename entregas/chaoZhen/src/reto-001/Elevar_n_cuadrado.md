@@ -1,7 +1,5 @@
 ### 3. Elevar n al cuadrado
 
-Calcular el cuadrado de n basándonos en la propiedad matemática: $n^2 = (n-1)^2 + 2n - 1$. El cuadrado de 0 es 0.
-
 <details open>
 <summary>Ver análisis recursivo</summary>
 
@@ -16,7 +14,7 @@ Calcular el cuadrado de n basándonos en la propiedad matemática: $n^2 = (n-1)^
 <center>9 = f(n-1) + 2(3) - 1 <i>o lo que es igual</i> <b>cuadrado(n - 1) + 2*n - 1</b></center>
 </details>
 
-### Pseudocódigo & código
+### Pseudocódigo
 
 <details open>
 <summary>Ver pseudocódigo</summary>
