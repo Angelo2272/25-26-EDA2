@@ -1,41 +1,52 @@
-### 4. En una palabra/frase, eliminar todas las apariciones de una letra
+# Reemplazar una letra
 
-Dada una cadena `s` y una letra `c`, devolver una nueva cadena sin las apariciones de `c`.
+En una palabra o frase, reemplazar una letra por otra.
 
-<details open>
-<summary>Ver análisis recursivo</summary>
+## Análisis recursivo
 
-Asumiendo que queremos eliminar la letra "o" de "hola":
+<div align=center>
 
-| | n | f(n) |
-| :--- | :---: | :---: |
-| CB | "" | "" |
-| ... | | |
-| CR n-1 | "ola" | "la" (se omite la 'o') |
-| CR n | "hola" | "hla" = "h" + "la" |
+| Tipo    | palabra | f(n, 'a', 'e') |
+|---------|---------|----------------|
+| **CB** | ""      | ""             |
+| ...     | ...     | ...            |
+| **CR n-1** | "asa"   | "ese"          |
+| **CR n** | "casa"  | "cese"         |
 
 <br>
-<center>"hla" = "h" + f(n-1) <i>o lo que es igual</i> <b>n[0] + eliminarLetra(n-1, c)</b></center>
-</details>
 
-### Pseudocódigo & código
+"cese" = 'c' + f("asa") → 'c' + "ese"
+
+**Patrón de recursividad:**
+
+- Si la Cabeza == letraVieja → **letraNueva + f(n-1)**
+- Si la Cabeza != letraVieja → **Cabeza + f(n-1)**
+
+</div>
+
+
+
+## Pseudocódigo
 
 <details open>
 <summary>Ver pseudocódigo</summary>
 
 ```text
-FUNCION eliminarLetra(n, c)
+FUNCION reemplazarUnaLetra(palabra, letraVieja, letraNueva)
 
-    SI longitud(n) es 0 ENTONCES
-        Devolver ""
-    FIN SI
-    
-    SI s[0] es igual a c ENTONCES
-        Devolver eliminarLetra(restoDeCadena(s), c)
+    SI palabra es vacía ENTONCES
+        Resultado = ""
     SINO
-        Devolver n[0] + eliminarLetra(restoDeCadena(s), c)
+        cabeza = palabra[0]
+        resto  = palabra[1...]
+
+        SI cabeza == letraVieja ENTONCES
+            Resultado = letraNueva + reemplazarUnaLetra(resto, letraVieja, letraNueva)
+        SINO
+            Resultado = cabeza + reemplazarUnaLetra(resto, letraVieja, letraNueva)
+        FIN SI
     FIN SI
-    
+
+    Devolver Resultado
+
 FIN FUNCIÓN
-```
-</details>
