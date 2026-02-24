@@ -1,7 +1,5 @@
 ### 7. En una lista, duplicar sus elementos
 
-Dada una lista, devolver una nueva lista donde cada elemento de la original aparezca dos veces seguidas.
-
 <details open>
 <summary>Ver análisis recursivo</summary>
 
@@ -18,7 +16,7 @@ Asumiendo la lista `L = [1, 2, 3]`:
 <center>[2, 2, 3, 3] = Cabeza + f(n-1)</center>
 </details>
 
-### Pseudocódigo & código
+### Pseudocódigo
 
 <details open>
 <summary>Ver pseudocódigo</summary>
@@ -30,7 +28,7 @@ FUNCION duplicarElementos(L)
         Devolver []
     FIN SI
     
-    Devolver [n[0], n[0]] + duplicarElementos(restoDeLista(n))
+    Devolver [cabeza, cabeza] + duplicarElementos(n-1)
     
 FIN FUNCIÓN
 ```
