@@ -11,14 +11,14 @@ Asumiendo `n = 6` (cuyo binario es "110"):
 | :--- | :---: | :---: |
 | CB | 1 | "1" |
 | ... | | |
-| CR n/2 | 3 | "11" = "1" + "1" |
+| CR n-1 | 3 | "11" = "1" + "1" |
 | CR n | 6 | "110" = "11" + "0" |
 
 <br>
-<center>"110" = f(n/2) + "0" <i>o lo que es igual</i> <b>binario(n / 2) + cadena(n MOD 2)</b></center>
+<center>"110" = f(n/2) + "0" <i>o lo que es igual</i> <b>binario(n / 2) + cadena(n%2)</b></center>
 </details>
 
-### Pseudocódigo & código
+### Pseudocódigo
 
 <details open>
 <summary>Ver pseudocódigo</summary>
@@ -34,7 +34,7 @@ FUNCION binario(n)
         Devolver "1"
     FIN SI
     
-    Devolver binario(n / 2) + convertirACadena(n MOD 2)
+    Devolver binario(n / 2) + convertirACadena(n%2)
     
 FIN FUNCIÓN
 ```
