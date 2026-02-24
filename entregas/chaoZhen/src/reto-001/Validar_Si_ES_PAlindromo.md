@@ -1,7 +1,5 @@
 ### 6. Validar si una palabra es un palíndromo
 
-Verificar si una cadena `s` se lee igual de izquierda a derecha que de derecha a izquierda.
-
 <details open>
 <summary>Ver análisis recursivo</summary>
 
@@ -15,10 +13,10 @@ Asumiendo la palabra "radar":
 | CR n | "radar" | Verdadero = ('r'=='r' y Verdadero) |
 
 <br>
-<center>Verdadero = ('r'=='r') y f(n-1) <i>o lo que es igual</i> <b>(s[0] == s[ultimo]) Y esPalindromo(s[n-1])</b></center>
+<center>Verdadero = ('r'=='r') y f(n-1) <i>o lo que es igual</i> <b>(cabeza == cola) Y esPalindromo(f[n-1])</b></center>
 </details>
 
-### Pseudocódigo & código
+### Pseudocódigo
 
 <details open>
 <summary>Ver pseudocódigo</summary>
@@ -26,14 +24,18 @@ Asumiendo la palabra "radar":
 ```text
 FUNCION esPalindromo(n)
 
-    SI longitud(n) <= 1 ENTONCES
+    SI esta vacío || palabra <= 1 ENTONCES
         Devolver Verdadero
     FIN SI
     
-    SI s[0] es igual a s[longitud(n) - 1] ENTONCES
-        Devolver esPalindromo(subcadena(s, 1, longitud(s) - 2)) 
+    cabeza = palabra[0]
+    cola   = palabra[longitud(palabra) - 1]
+    
+    SI cabeza == cola ENTONCES
+        centro = subcadena(palabra, primer_indice)
+        Devolver esPalindromo(centro)
     SINO
-        Devolver FalsoValidar su una palabra es un palíndromo
+        Devolver Falso
     FIN SI
     
 FIN FUNCIÓN
