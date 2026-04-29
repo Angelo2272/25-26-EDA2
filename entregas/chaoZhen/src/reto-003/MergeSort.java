@@ -55,7 +55,7 @@ public class MergeSort {
     private static void fusionar(int[] array, int izquierda, int medio, int derecha) {
         String indentacion = obtenerIndentacion(); 
         System.out.println(indentacion + "[fusionar] Inicio fusionar: izq=" + izquierda + ", medio=" + medio + ", der=" + derecha);
-        
+        System.out.println("==========================================================================================");
         int tamanoIzquierda = medio - izquierda + 1;
         int tamanoDerecha = derecha - medio;
         int[] mitadIzquierda = new int[tamanoIzquierda];
