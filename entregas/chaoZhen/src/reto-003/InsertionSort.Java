@@ -63,19 +63,19 @@ public class InsertionSort {
     }
 
     
-    public static String imprimirArray(int[] a) {
-        String s = "[";
-        for (int i = 0; i < a.length; i++) {
-            s += a[i] + (i < a.length - 1 ? ", " : "");
+   public static String imprimirArray(int[] array) {
+        String resultadoArray = "[";
+        for (int i = 0; i < array.length; i++) {
+            resultadoArray += array[i] + (i < array.length - 1 ? ", " : "");
         }
-        return s + "]";
+        return resultadoArray + "]";
     }
 
     public static String obtenerIndentacion(int nivel) {
-        String s = "";
+        String espaciosIndentacion = "";
         for (int i = 0; i < nivel; i++) {
-            s += "    "; 
+            espaciosIndentacion += "    "; 
         }
-        return s;
+        return espaciosIndentacion;
     }
 }
