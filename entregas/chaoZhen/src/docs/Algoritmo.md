@@ -1,6 +1,6 @@
 ### Propuesta de Algoritmo
 
-Propuesta escrite hecha en clase ![Propuesta Escrita](/entregas/chaoZhen/src/image/Propuesta-Algoritmo.jpeg)
+Propuesta escrita hecha en clase ![Propuesta Escrita](/entregas/chaoZhen/src/image/Propuesta-Algoritmo.jpeg)
 
 * Comenzar en la esquina superior derecha de la matriz en el número **21**.
 
